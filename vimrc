@@ -1,26 +1,29 @@
+" vimrc-pre.py
+if has('python3')
+  py3f $HOME/.vim/vimrc-pre.py
+endif
+
+
+" vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'ycm-core/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
-Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-vinegar'
 call plug#end()
+
+if g:fs_init
+  PlugInstall
+endif
 
 " keys
 let mapleader = "\ "
 inoremap jk <esc>
 inoremap <esc> <nop>
 nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
-
-
-" misc
-set number
-" iabbrev fs-copy Copyright 2019 F.S., all rights reserved. 
-set encoding=utf-8
-set ignorecase
-set smartcase
-set incsearch
-set expandtab
-set shiftwidth=2
-set softtabstop=2
+vnoremap J <nop>
+vnoremap K <nop>
+vnoremap H <nop>
+vnoremap L <nop>
 
 
 " autochdir
@@ -58,3 +61,21 @@ augroup OnSave
 	autocmd!
 	autocmd BufWritePre *.h,*.cc,*cpp call FormatOnSave()
 augroup END
+
+
+" misc
+set number
+" iabbrev fs-copy Copyright 2019 F.S., all rights reserved. 
+set encoding=utf-8
+set ignorecase
+set smartcase
+set incsearch
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+
+
+"vimrc-post.py
+if has('python3')
+  py3f $HOME/.vim/vimrc-post.py
+endif
