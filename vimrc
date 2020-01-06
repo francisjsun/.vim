@@ -15,6 +15,7 @@ if g:fs_init
   PlugInstall
 endif
 
+
 " keys
 let mapleader = "\ "
 inoremap jk <esc>
@@ -63,6 +64,13 @@ augroup OnSave
 augroup END
 
 
+" filename completion
+if has("wildmenu")
+  set wildmenu
+  set wildmode=longest,list
+endif
+
+
 " misc
 set number
 " iabbrev fs-copy Copyright 2019 F.S., all rights reserved. 
@@ -70,6 +78,7 @@ set encoding=utf-8
 set ignorecase
 set smartcase
 set incsearch
+set hlsearch
 set expandtab
 set shiftwidth=2
 set softtabstop=2
