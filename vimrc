@@ -16,17 +16,6 @@ if g:fs_init
 endif
 
 
-" keys
-let mapleader = "\ "
-inoremap jk <esc>
-inoremap <esc> <nop>
-nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
-vnoremap J <nop>
-vnoremap K <nop>
-vnoremap H <nop>
-vnoremap L <nop>
-
-
 " autochdir
 if exists('+autochdir')
   set autochdir
@@ -40,6 +29,7 @@ endif
 
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1
+nnoremap <f12> :YcmCompleter GoToDefinition<CR>
 
 
 " clang-format
@@ -82,6 +72,18 @@ set hlsearch
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+
+
+" keys
+let mapleader = "\ "
+inoremap jk <esc>
+inoremap <esc> <nop>
+nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+nnoremap <leader>/ :noh<CR>
+vnoremap J <nop>
+vnoremap K <nop>
+vnoremap H <nop>
+vnoremap L <nop>
 
 
 "vimrc-post.py
