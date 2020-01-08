@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'ycm-core/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-vinegar'
+Plug 'tikhomirov/vim-glsl'
 call plug#end()
 
 if g:fs_init
@@ -57,7 +58,7 @@ augroup END
 " filename completion
 if has("wildmenu")
   set wildmenu
-  set wildmode=longest,list
+  set wildmode=longest:full,list:full
 endif
 
 
