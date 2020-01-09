@@ -35,11 +35,15 @@ nnoremap <f12> :YcmCompleter GoToDefinition<CR>
 
 " clang-format
 let g:clang_format_py = "/usr/share/vim/addons/syntax/clang-format.py"
-if filereadable(g:clang_format_py)
-  let g:clang_format_py_found = 1
-else
-  let g:clang_format_py_found = 0
-  echoerr "Missing clang_format.py file"
+let g:clang_format_py_found = 0
+if has("python3")
+  if filereadable(g:clang_format_py)
+    let g:clang_format_py_found = 1
+  endif
+endif
+
+if g:clang_format_py_found == 0
+  echoerr "Missing file: " . g:clang_format_py
 endif
 
 function! FormatOnSave()
