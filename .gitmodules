@@ -1,0 +1,15 @@
+[submodule "pack/plugins/start/YouCompleteMe"]
+	path = pack/plugins/start/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe.git
+[submodule "pack/plugins/start/vim-airline"]
+	path = pack/plugins/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "pack/plugins/start/vim-vinegar"]
+	path = pack/plugins/start/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar.git
+[submodule "pack/plugins/start/vim-glsl"]
+	path = pack/plugins/start/vim-glsl
+	url = https://github.com/tikhomirov/vim-glsl.git
+[submodule "pack/plugins/start/moon"]
+	path = pack/plugins/start/moon
+	url = https://github.com/francisjsun/moon.git
