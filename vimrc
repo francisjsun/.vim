@@ -1,20 +1,20 @@
-" vimrc-pre.py
-if has('python3')
-  py3f $HOME/.vim/vimrc-pre.py
-endif
-
-
-" vim-plug
-call plug#begin('~/.vim/plugged')
-Plug 'ycm-core/YouCompleteMe'
-Plug 'vim-airline/vim-airline'
-Plug 'tpope/vim-vinegar'
-Plug 'tikhomirov/vim-glsl'
-call plug#end()
-
-if g:fs_init
-  PlugInstall
-endif
+" " vimrc-pre.py
+" if has('python3')
+"   py3f $HOME/.vim/vimrc-pre.py
+" endif
+" 
+" 
+" " vim-plug
+" call plug#begin('~/.vim/plugged')
+" Plug 'ycm-core/YouCompleteMe'
+" Plug 'vim-airline/vim-airline'
+" Plug 'tpope/vim-vinegar'
+" Plug 'tikhomirov/vim-glsl'
+" call plug#end()
+" 
+" if g:fs_init
+"   PlugInstall
+" endif
 
 
 " autochdir
@@ -65,6 +65,15 @@ if has("wildmenu")
   set wildmode=longest:full,list:full
 endif
 
+" moon
+command! AddCopyright call moon#plugin#copyright#AddCopyrightToCurrentFile('F.S.')
+
+
+" indent
+set expandtab
+set smartindent
+set shiftwidth=2
+filetype plugin indent on
 
 " misc
 set number
@@ -74,10 +83,6 @@ set ignorecase
 set smartcase
 set incsearch
 set hlsearch
-set expandtab
-set shiftwidth=2
-set softtabstop=2
-
 
 " keys
 let mapleader = "\ "
