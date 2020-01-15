@@ -66,7 +66,7 @@ if has("wildmenu")
 endif
 
 " moon
-command! AddCopyright call moon#plugin#copyright#AddCopyrightToCurrentFile('F.S.')
+command! InsertCopyright call moon#plugin#copyright#InsertCopyright(expand('%:p'), 'Francis Sun')
 
 
 " indent
