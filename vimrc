@@ -1,9 +1,15 @@
-" " vimrc-pre.py
-" if has('python3')
-"   py3f $HOME/.vim/vimrc-pre.py
-" endif
-" 
-" 
+" Copyright (C) 2020 Francis Sun, all rights reserved.
+
+
+let g:vimrc_dir = expand('<sfile>:p:h')
+let g:copyright_author = 'Unknown'
+
+" vimrc_pre.py
+if has('python3')
+  py3f $HOME/.vim/vimrc_pre.py
+endif
+
+
 " " vim-plug
 " call plug#begin('~/.vim/plugged')
 " Plug 'ycm-core/YouCompleteMe'
@@ -17,15 +23,15 @@
 " endif
 
 
-" autochdir
-if exists('+autochdir')
-  set autochdir
-else
-  augroup OnEnterBuffer
-    autocmd!
-    autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
-  augroup END
-endif
+" " autochdir
+" if exists('+autochdir')
+"   set autochdir
+" else
+"   augroup OnEnterBuffer
+"     autocmd!
+"     autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
+"   augroup END
+" endif
 
 
 " YouCompleteMe
@@ -34,7 +40,6 @@ nnoremap <f12> :YcmCompleter GoToDefinition<CR>
 
 
 " clang-format
-let g:clang_format_py = "/usr/share/vim/addons/syntax/clang-format.py"
 let g:clang_format_py_found = 0
 if has("python3")
   if filereadable(g:clang_format_py)
@@ -43,7 +48,7 @@ if has("python3")
 endif
 
 if g:clang_format_py_found == 0
-  echoerr "Missing file: " . g:clang_format_py
+  " echoerr "Missing file: " . g:clang_format_py
 endif
 
 function! FormatOnSave()
@@ -66,7 +71,8 @@ if has("wildmenu")
 endif
 
 " moon
-command! InsertCopyright call moon#plugin#copyright#InsertCopyright(expand('%:p'), 'Francis Sun')
+command! InsertCopyright call moon#plugin#copyright#InsertCopyright
+      \ (expand('%:p'), g:copyright_author)
 
 
 " indent
@@ -96,7 +102,7 @@ vnoremap H <nop>
 vnoremap L <nop>
 
 
-"vimrc-post.py
+"vimrc_post.py
 if has('python3')
-  py3f $HOME/.vim/vimrc-post.py
+  py3f $HOME/.vim/vimrc_post.py
 endif

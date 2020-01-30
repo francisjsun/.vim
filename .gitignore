@@ -5,3 +5,4 @@ plugged
 # files
 *.swp
 .netrwhist
+vimrc_config.json
