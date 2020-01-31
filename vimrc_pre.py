@@ -1,6 +1,5 @@
 # Copyright (C) 2020 Francis Sun, all rights reserved.
 
-
 import vim
 import urllib.request
 import os

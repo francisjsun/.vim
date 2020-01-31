@@ -1,6 +1,5 @@
 " Copyright (C) 2020 Francis Sun, all rights reserved.
 
-
 let g:vimrc_dir = expand('<sfile>:p:h')
 let g:copyright_author = 'Unknown'
 
