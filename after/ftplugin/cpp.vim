@@ -1,1 +1,1 @@
-setlocal cino=g0
+setlocal cino+=g1 cino+=h1
