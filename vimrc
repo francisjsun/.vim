@@ -34,7 +34,7 @@ function! ClangFormatOnWrite()
           execute "py3f" g:clang_format_py
         endif
 endfunction
-augroup OnSave
+augroup OnWrite
 	autocmd!
 	autocmd BufWritePre *.h,*.cc,*cpp call ClangFormatOnWrite()
 augroup END
@@ -65,6 +65,9 @@ augroup END
 
 " edit a file in the same dir of the current file
 nnoremap <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+
+" pymode
+let g:pymode_options_colorcolumn = 0
 
 " misc
 set number

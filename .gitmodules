@@ -13,3 +13,6 @@
 [submodule "pack/plugins/start/moon"]
 	path = pack/plugins/start/moon
 	url = https://github.com/francisjsun/moon.git
+[submodule "pack/plugins/start/python-mode"]
+	path = pack/plugins/start/python-mode
+	url = https://github.com/python-mode/python-mode.git
