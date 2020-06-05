@@ -5,4 +5,4 @@ plugged
 # files
 *.swp
 .netrwhist
-vimrc_config.json
+moon_cfg.json
