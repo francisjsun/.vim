@@ -16,3 +16,6 @@
 [submodule "pack/plugins/start/python-mode"]
 	path = pack/plugins/start/python-mode
 	url = https://github.com/python-mode/python-mode.git
+[submodule "pack/plugins/start/vim-table-mode"]
+	path = pack/plugins/start/vim-table-mode
+	url = https://github.com/dhruvasagar/vim-table-mode.git
