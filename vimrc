@@ -41,8 +41,6 @@ set incsearch
 set hlsearch
 
 " keys
-inoremap jk <esc>
-inoremap <esc> <nop>
 nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 nnoremap <leader>/ :noh<CR>
 nnoremap <leader>s :update<CR>
