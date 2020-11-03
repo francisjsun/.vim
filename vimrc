@@ -48,14 +48,10 @@ vnoremap J <nop>
 vnoremap K <nop>
 vnoremap H <nop>
 vnoremap L <nop>
+cnoremap <C-P> <Up>
+cnoremap <C-N> <Down>
 
 " plugins
-
-" airline
-let g:airline#extensions#tagbar#enabled = 0
-
-" tagbar
-" nnoremap <leader>t :TagbarToggle<CR>
 
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1
