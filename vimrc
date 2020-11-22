@@ -12,6 +12,8 @@ if has("wildmenu")
   set wildmode=longest:full,list:full
 endif
 
+syntax on
+
 " indent
 set expandtab
 set smartindent
